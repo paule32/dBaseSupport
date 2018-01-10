@@ -1,0 +1,2 @@
+# dBaseSupport
+QtCreator dBase Support
