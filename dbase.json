@@ -1,0 +1,54 @@
+{
+    "Name" : "dBase",
+    "Version" : "4.5.0",
+    "CompatVersion" : "4.5.0",
+    "Vendor" : "Jens Kallup",
+    "Copyright" : "(c) 2018 Jens Kallup",
+    "License" : [ "non-profit Usage",
+                  "",
+                  "",
+                  "",
+                  "GNU Lesser General Public License Usage",
+                  "",
+                  ""
+    ],
+    "Category" : "Other Languages",
+    "Description" : "Plugin for supporting the dBase programming language.",
+    "Url" : "http://www.kallup.org",
+    "Experimental" : true,
+    "Dependencies" : [
+        { "Name" : "Core", "Version" : "4.5.0" },
+        { "Name" : "TextEditor", "Version" : "4.5.0" },
+        { "Name" : "ProjectExplorer", "Version" : "4.5.0" }
+    ],
+
+    "Mimetypes" : [
+        "<?xml version='1.0'?>",
+        "<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>",
+
+        "    <mime-type type='text/x-dbase-project'>",
+        "        <sub-class-of type='text/plain'/>",
+        "        <comment>dBase project file</comment>",
+        "        <glob pattern='*.dbproject'/>",
+        "    </mime-type>",
+
+        "    <mime-type type='text/x-dbase'>",
+        "        <sub-class-of type='text/plain'/>",
+        "        <comment>dBase prg source file </comment>",
+        "        <glob pattern='*.prg'/>",
+        "    </mime-type>",
+
+        "    <mime-type type='text/x-dbase'>",
+        "        <sub-class-of type='text/plain'/>",
+        "        <comment>dBase formular source file </comment>",
+        "        <glob pattern='*.wfm'/>",
+        "    </mime-type>",
+
+        "    <mime-type type='text/x-dbase-script'>",
+        "        <sub-class-of type='text/plain'/>",
+        "        <comment>dBase script file </comment>",
+        "        <glob pattern='*.dbs'/>",
+        "    </mime-type>",
+        "</mime-info>"
+    ]
+}

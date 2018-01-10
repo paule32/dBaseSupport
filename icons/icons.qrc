@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/dbsql.png</file>
+        <file>img/dbedit.png</file>
+        <file>img/dbgrid.png</file>
+        <file>img/dblabel.png</file>
+        <file>img/dbimage.png</file>
+    </qresource>
+</RCC>
