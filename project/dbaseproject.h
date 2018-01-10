@@ -8,7 +8,6 @@
 #include <QElapsedTimer>
 #include <QFutureWatcher>
 #include <QTimer>
-#include <QVariant>
 
 namespace dBase {
 class dBaseProject : public ProjectExplorer::Project {

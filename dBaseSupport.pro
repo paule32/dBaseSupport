@@ -6,11 +6,11 @@
 #------------------------------------------------------------------------
 PWD=$$system(pwd)
 
-include("/home/jens/qtcreator/4.5.0/src/qtcreatorplugin.pri")  # FIXME
+include("../../qtcreatorplugin.pri")
 TOPDIR=.
 SRCDIR=$${TOPDIR}
 
-LIBLDR=/home/jens/qtcreator/4.5.0/lib/qtcreator  # FIXME
+LIBLDR=../../../lib/qtcreator  # FIXME
 
 UI_DIR =$${PWD}/.uic
 MOC_DIR=$${PWD}/.moc
@@ -30,6 +30,7 @@ INCLUDEPATH += $$PWD
 
 HEADERS += \
     $${SRCDIR}/dbasesupport.h \
+    $${SRCDIR}/dbaseplugin.h \
     $${SRCDIR}/editor/dbaseeditorfactory.h \
     $${SRCDIR}/editor/dbaseindenter.h \
     $${SRCDIR}/editor/dbasehighlighter.h \
@@ -55,15 +56,18 @@ HEADERS += \
     $${SRCDIR}/project/dbaserunconfigurationwidget.h \
     $${SRCDIR}/project/dbasetoolchain.h \
     $${SRCDIR}/project/dbasetoolchainfactory.h \
+    $${SRCDIR}/setting/nimcodestylepreferencesfactory.h \
+    $${SRCDIR}/setting/nimcodestylesettingspage.h \
+    $${SRCDIR}/setting/nimcodestylepreferenceswidget.h \
+    $${SRCDIR}/setting/nimsettings.h \
     $${SRCDIR}/database/dbsql.h \
     $${SRCDIR}/database/popupmenu.h \
-    $${SRCDIR}/plugins/dbaseplugin.h \
     $${SRCDIR}/plugins/dbasepluginconstants.h \
-    $${SRCDIR}/plugins/dbsqlplugin.h \
     $${SRCDIR}/plugins/popupmenuplugin.h
     
 SOURCES += \
     $${SRCDIR}/dbasesupport.cc \
+    $${SRCDIR}/dbaseplugin.cc \
     $${SRCDIR}/editor/dbaseeditorfactory.cc \
     $${SRCDIR}/editor/editorindent.cc \
     $${SRCDIR}/editor/dbasehighlighter.cc \
@@ -91,7 +95,10 @@ SOURCES += \
     $${SRCDIR}/project/dbasetoolchainfactory.cc \
     $${SRCDIR}/database/dbsql.cc \
     $${SRCDIR}/database/popupmenu.cc \
-    $${SRCDIR}/plugins/dbaseplugin.cc \
+    $${SRCDIR}/setting/nimcodestylepreferencesfactory.cpp \
+    $${SRCDIR}/setting/nimcodestylesettingspage.cpp \
+    $${SRCDIR}/setting/nimcodestylepreferenceswidget.cpp \
+    $${SRCDIR}/setting/nimsettings.cpp \
     $${SRCDIR}/plugins/dbsqlplugin.cc \
     $${SRCDIR}/plugins/popupmenuplugin.cc
     
@@ -109,7 +116,8 @@ DISTFILES += \
 
 FORMS += \
     project/dbasecompilerbuildstepconfigwidget.ui \
-    project/dbasecompilercleanstepconfigwidget.ui
+    project/dbasecompilercleanstepconfigwidget.ui \
+    setting/nimcodestylepreferenceswidget.ui 
 
 LIBS += -L. -L$${LIBLDR}/plugins -lCore
 LIBS += -L. -L$${LIBLDR}/plugins -lTextEditor

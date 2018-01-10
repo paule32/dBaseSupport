@@ -3,6 +3,7 @@
 
 #include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
+namespace dBase {
 class dbSQLPlugin : public QObject, public QDesignerCustomWidgetInterface
 {
     Q_OBJECT
@@ -27,5 +28,5 @@ public:
 private:
     bool m_initialized;
 };
-
+}  // namespace: dBase
 #endif

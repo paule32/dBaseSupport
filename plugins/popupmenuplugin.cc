@@ -6,6 +6,7 @@
 #include <QtDesigner/QDesignerPropertySheetExtension>
 #include <QtDesigner/QDesignerFormEditorInterface>
 
+namespace dBase {
 PopupMenuPlugin::PopupMenuPlugin(QObject *parent)
     : QObject(parent)
 {
@@ -80,3 +81,4 @@ QString PopupMenuPlugin::includeFile() const
     return QStringLiteral("popupmenu.h");
 }
 
+}  // namespace: dBase

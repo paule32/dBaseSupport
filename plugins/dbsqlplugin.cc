@@ -1,14 +1,15 @@
 #include "database/dbsql.h"
 #include "dbsqlplugin.h"
 
-#include "database/popupmenu.h"
-#include "plugins/popupmenuplugin.h"
+#include "../database/popupmenu.h"
+#include "popupmenuplugin.h"
 
 #include <QtPlugin>
 #include <QtDesigner/QExtensionManager>
 #include <QtDesigner/QDesignerPropertySheetExtension>
 #include <QtDesigner/QDesignerFormEditorInterface>
 
+namespace dBase {
 dbSQLPlugin::dbSQLPlugin(QObject *parent)
     : QObject(parent)
 {
@@ -81,4 +82,6 @@ QString dbSQLPlugin::domXml() const
 QString dbSQLPlugin::includeFile() const
 {
     return QStringLiteral("dbSQL.h");
+}
+
 }

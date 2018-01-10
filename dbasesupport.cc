@@ -2,7 +2,8 @@
 #include "plugins/dbsqlplugin.h"
 #include "dbasesupport.h"
 
-dbasesupport::dbasesupport(QObject *parent)
+namespace dBase {
+dBaseSupport::dBaseSupport(QObject *parent)
     : QObject(parent)
 {
     m_widgets.append(new PopupMenuPlugin(this));
@@ -10,7 +11,9 @@ dbasesupport::dbasesupport(QObject *parent)
     
 }
 
-QList<QDesignerCustomWidgetInterface*> dbasesupport::customWidgets() const
+QList<QDesignerCustomWidgetInterface*> dBaseSupport::customWidgets() const
 {
     return m_widgets;
 }
+
+}  // namespace: dBase

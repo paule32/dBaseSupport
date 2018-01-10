@@ -1,8 +1,9 @@
-#include "dbaseprojectnode.h"
-#include "dbaseproject.h"
-#include "dbasetoolchain.h"
+#ifndef DBASEPROJECT_H2_
+#define DBASEPROJECT_H2_
 
+#include "dbaseproject.h"
 #include "dbasebuildconfiguration.h"
+#include "dbaseprojectnode.h"
 #include "dbasetoolchain.h"
 
 #include "../plugins/dbasepluginconstants.h"
@@ -34,7 +35,7 @@ using namespace Utils;
 namespace dBase {
 const int MIN_TIME_BETWEEN_PROJECT_SCANS = 4500;
 
-dBaseProject::dBaseProject(const FileName &fileName)
+dBaseProject::dBaseProject(const Utils::FileName &fileName)
     : Project(Constants::C_DBASE_MIMETYPE, fileName)
 {
     setId(Constants::C_DBASEPROJECT_ID);
@@ -210,3 +211,5 @@ Project::RestoreResult dBaseProject::fromMap(const QVariantMap &map, QString *er
 }
 
 }  // namespace: dBase
+
+#endif
